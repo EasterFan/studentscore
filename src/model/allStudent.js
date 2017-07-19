@@ -1,3 +1,5 @@
+'use strict'
+
 var Student = require('../model/student').Student;
 
 class Allstudent

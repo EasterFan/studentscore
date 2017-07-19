@@ -28,7 +28,7 @@ function inputInfo(input)
                     return '请输入学生信息（格式：姓名, 学号, 民族, 班级, 学科: 成绩, ...），按回车提交：';
                     break;
                 case '2':
-                    status = 3; //change status??
+                    status = 2; //change status??
                     return '请输入要打印的学生的学号（格式： 学号, 学号,...），按回车提交：';
                     break;
                 case '3':

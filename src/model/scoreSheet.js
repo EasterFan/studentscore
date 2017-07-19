@@ -1,29 +1,31 @@
+'use strict'
+
 class ScoreSheet
 {
     constructor(studentInfo)
     {
         this.studentInfo = studentInfo;
-        this.allAverage = 0;
-        this.allMedian = 0;
+        this.averageOfAll = 0;
+        this.medianOfAll = 0;
     }
 
     averageOfAllStudent() {
         var sum = 0;
-        this.studentsInfo.forEach(function(e){
+        this.studentInfo.forEach(function(e){
             sum += e.average;
         });
-        this.averageOfAll = this.studentsInfo.length === 0 ? 0 : sum/this.studentsInfo.length;
+        this.averageOfAll = this.studentInfo.length === 0 ? 0 : sum/this.studentInfo.length;
     }
 
     medianOfAllStudent(){
-        if(this.studentsInfo.length === 0){
+        if(this.studentInfo.length === 0){
             this.medianOfAll = 0;
         }
-        else if(this.studentsInfo.length === 1){
-            this.medianOfAll = this.studentsInfo[0].sumScore;
+        else if(this.studentInfo.length === 1){
+            this.medianOfAll = this.studentInfo[0].sumScore;
         }
         else {
-            var tmp = this.studentsInfo.sort(function (a, b) {
+            var tmp = this.studentInfo.sort(function (a, b) {
                 return a.sumScore - b.sumScore;
             });
 
